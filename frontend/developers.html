@@ -5,33 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developers - Video Analysis</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #C78B9A;
+            text-align: center;
+        }
+        .container {
+            background: linear-gradient(to right, #a00044, #a00044);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 80%;
+            margin: 50px auto;
+            color: #f7f5dd;
+            font-weight: bold;
+        }
+        .dev-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .dev-card {
+            background: #ffffff1a;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+        .dev-card:hover {
+            transform: scale(1.05);
+        }
+        .dev-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10%;
+            object-fit: cover;
+        }
+        .dev-card h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        .dev-card p {
+            font-size: 16px;
+            margin-top: 5px;
+            color: #ffd9e6;
+        }
+    </style>
 </head>
 <body>
-    
+
     <div class="container">
         <h1>Meet Our Developers</h1>
         <div class="dev-grid">
             <div class="dev-card">
-                <img src="dev1.jpg" alt="Developer 1">
-                <h3>Rashi</h3>
-                <p>Lead AI Developer</p>
+                <img src="rashi.jpg" alt="Developer 1">
+                <h3>Mohammed Rashid M</h3>
+                <p>Lead AI Developer<br> Frontend Designer</p>
             </div>
             <div class="dev-card">
-                <img src="dev2.jpg" alt="Developer 2">
-                <h3>John Doe</h3>
-                <p>Backend Engineer</p>
-            </div>
-            <div class="dev-card">
-                <img src="dev3.jpg" alt="Developer 3">
-                <h3>Jane Doe</h3>
+                <img src="finny.jpg" alt="Developer 2">
+                <h3>Finny T Achenkunju</h3>
                 <p>Frontend Designer</p>
             </div>
             <div class="dev-card">
-                <img src="dev4.jpg" alt="Developer 4">
-                <h3>Smith</h3>
+                <img src="alfya.jpg" alt="Developer 3">
+                <h3>Alfiya Muhammed</h3>
+                <p>Backend Engineer</p>
+            </div>
+            <div class="dev-card">
+                <img src="lena.jpg" alt="Developer 4">
+                <h3>Lena Mariam Biju</h3>
                 <p>UI/UX Designer</p>
             </div>
         </div>
     </div>
+
 </body>
 </html>

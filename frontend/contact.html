@@ -5,13 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Video Analysis</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #C78B9A;
+            text-align: center;
+        }
+        .container {
+            background: linear-gradient(to right, #a00044, #a00044);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 50%;
+            margin: 100px auto;
+            color: #f7f5dd;
+            font-weight: bold;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        .contact-item img {
+            width: 30px;
+            height: 30px;
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #f7f5dd;
+            transition: 0.3s;
+        }
+        .contact-item a:hover {
+            color: #ef5d8e;
+        }
+    </style>
 </head>
 <body>
-    
+
     <div class="container">
         <h1>Contact Us</h1>
-        <p>Email: support@videocensor.com</p>
-        <p>Phone: +91 9876543210</p>
+        
+        <div class="contact-item">
+            <img src="mail.png" alt="Email">
+            <a href="mailto:22cs468@mgits.ac.in">22cs468@mgits.ac.in.com</a>
+        </div>
+
+        <div class="contact-item">
+            <img src="whatsapp-icon.svg" alt="Phone">
+            <a href="tel:+919645256211">+91 9645256211</a>
+        </div>
+
+        <div class="contact-item">
+            <img src="linkdin.png" alt="LinkedIn">
+            <a href="https://www.linkedin.com/in/mohammed-rashidm/" target="_blank">Mohammed Rashid M</a>
+        </div>
     </div>
+
 </body>
 </html>
