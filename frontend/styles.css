@@ -1,0 +1,125 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #C78B9A;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 160px;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #a00044;
+            padding: 10px 0;
+            z-index: 500;
+        }
+        .header img {
+            width: 380px;
+            margin-top: -100px;
+        }
+        .header p {
+            margin-top: -70px;
+            font-size: 20px;
+        }
+        .content {
+            margin-top: 120px;
+        }
+        .container {
+            max-width: 800px;
+            color: #f7f5dd;
+            margin: auto;
+            padding-top: 30px;
+            background: #a00044;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #C78B9A;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ef5d8e;
+        }
+        video {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            background: #252538;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .stat-box {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffe100;
+        }
+        .detection-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .detection-category {
+            flex: 1;
+            background: #ef5d8e;
+            padding: 10px;
+            border-radius: 5px;
+            color: #f7f5dd;
+        }
+        .detection-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .detection-tag {
+            background: #f7f5dd;
+            color: #564146;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .htext{
+            color: #f7f5dd;
+            font-weight: bold;
+            font-size: 12px;
+        
+        }
+        #movieName{
+            color: #000000;
+            font-weight: bold;
+        }
+        #moviename{
+            color: #000000;
+            font-weight: bold;
+        }
+        #movierate{
+            color: #000000;
+            font-weight: bold;
+        }
+        #movieRating{
+            color: #000000;
+            font-weight: bold;
+        }
+        

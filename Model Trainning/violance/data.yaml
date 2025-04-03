@@ -1,0 +1,15 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['Fire', 'Handgun', 'Knife', 'Rifle', 'Smoke', 'Violence', 'blood']
+
+
+
+roboflow:
+  workspace: blood-aquyo
+  project: dtctblood
+  version: 6
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/blood-aquyo/dtctblood/dataset/6
