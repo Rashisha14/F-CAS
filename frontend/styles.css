@@ -49,6 +49,8 @@
             color: #ffffff;
             font-size: 16px;
             cursor: pointer;
+            width: 15%;
+            align-items: center;
         }
         button:hover {
             background-color: #ef5d8e;

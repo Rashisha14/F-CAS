@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="header">
+        <img src="logo low.png" alt="Logo">
+        <p class="htext">Get your movie rated instantly! Our AI analyzes your film for content like smoking, nudity, and violence to assign an accurate certification<br>Helping you meet industry standards.</p>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h2>Upload Movie for Censoring</h2>
+            <input type="file" id="videoInput">
+            <button onclick="uploadVideo()">Upload</button>
+            <p id="status"></p>
+            <video id="uploadedVideo" controls style="display: none;" onended="generateCertificate()"></video>
+
+            
+            <h3>Movie Information</h3>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <p>Total Duration</p>
+                    <p class="stat-number" id="videoDuration">N/A</p>
+                </div>
+                <div class="stat-box">
+                    <p>Drugs Detected</p>
+                    <p class="stat-number" id="smokingCount">0 sec (0%)</p>
+                </div>
+                <div class="stat-box">
+                    <p>Nudity Detected</p>
+                    <p class="stat-number" id="nudityCount">0 sec (0%)</p>
+                </div>
+                <div class="stat-box">
+                    <p>Violence Detected</p>
+                    <p class="stat-number" id="violenceCount">0 sec (0%)</p>
+                </div>
+            </div>
+            
+            <h3>Detection Moments</h3>
+            <div class="detection-wrapper">
+                <div id="smokingResults" class="detection-category">
+                    <h4>🚬🍷💉 Drugs Detected At</h4>
+                    <div id="smokingList" class="detection-container"></div>
+                </div>
+                <div id="nudityResults" class="detection-category">
+                    <h4>🔞 Nudity Detected At:</h4>
+                    <div id="nudityList" class="detection-container"></div>
+                </div>
+                <div id="violenceResults" class="detection-category">
+                    <h4>⚠️ Violence Detected At:</h4>
+                    <div id="violenceList" class="detection-container"></div>
+                </div>
+            </div>
+            
+            <h3>Certificate</h3>
+            <div id="certificate" 
+     style="display: none; background: #f7f5dd; padding: 20px; border-radius: 10px; color: #000;">
+    <h4>🎉 Certificate of Analysis</h4>
+    <p id="moviename" >Movie Name: <span id="movieName">N/A</span></p>
+    <p id="movierate" >Rating: <span id="movieRating">N/A</span></p>
+</div>
+    </div>
+    <script src="script.js"></script>
+    
+
+        
+</body>
+</html>

@@ -3,71 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Analysis</title>
+    <title>Video Analysis - Home</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #C78B9A;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff00;
+            padding: 10px 20px;
+            margin-bottom: -60px;
+            margin-top: 70px;
+            margin-left: 75%;
+        }
+        .navbar img {
+            height: 40px;
+            margin-top: -40px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #a00044;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ef5d8e
+        }
+        .container {
+            background: linear-gradient(to right, #a00044, #a00044);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 60%;
+            margin-top: -40px;
+            margin: 100px auto;
+            color: #f7f5dd;
+            font-weight: bold;
+        }
+        .container img {
+            width: 50%;
+            margin-bottom: -90px;
+            margin-top: -40px;
+        }
+        .container h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .start-btn {
+            background-color: #ef5d8e;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            width: 20%;
+        }
+        .start-btn:hover {
+            background-color: #a00044;
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#">Info</a>
+            <a href="#">Source Code</a>
+            <a href="#">Developers</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="container">
         <img src="logo low.png" alt="Logo">
-        <p class="htext">Get your movie rated instantly! Our AI analyzes your film for content like smoking, nudity, and violence to assign an accurate certification<br>Helping you meet industry standards.</p>
+        <h1>Welcome to Movie Censor Analysis</h1>
+        <br><br>
+        <p>Get your movie rated instantly! Our AI analyzes your film for content like smoking, nudity, and violence to assign an accurate certification.<br>Helping you meet industry standards.</p>
+        <button onclick="startCensoring()" class="start-btn">Start Censoring</button>
     </div>
-    <div class="content">
-        <div class="container">
-            <h2>Upload Movie for Censoring</h2>
-            <input type="file" id="videoInput">
-            <button onclick="uploadVideo()">Upload</button>
-            <p id="status"></p>
-            <video id="uploadedVideo" controls style="display: none;" onended="generateCertificate()"></video>
-
-            
-            <h3>Movie Information</h3>
-            <div class="stats-container">
-                <div class="stat-box">
-                    <p>Total Duration</p>
-                    <p class="stat-number" id="videoDuration">N/A</p>
-                </div>
-                <div class="stat-box">
-                    <p>Drugs Detected</p>
-                    <p class="stat-number" id="smokingCount">0 sec (0%)</p>
-                </div>
-                <div class="stat-box">
-                    <p>Nudity Detected</p>
-                    <p class="stat-number" id="nudityCount">0 sec (0%)</p>
-                </div>
-                <div class="stat-box">
-                    <p>Violence Detected</p>
-                    <p class="stat-number" id="violenceCount">0 sec (0%)</p>
-                </div>
-            </div>
-            
-            <h3>Detection Moments</h3>
-            <div class="detection-wrapper">
-                <div id="smokingResults" class="detection-category">
-                    <h4>🚬🍷💉 Drugs Detected At</h4>
-                    <div id="smokingList" class="detection-container"></div>
-                </div>
-                <div id="nudityResults" class="detection-category">
-                    <h4>🔞 Nudity Detected At:</h4>
-                    <div id="nudityList" class="detection-container"></div>
-                </div>
-                <div id="violenceResults" class="detection-category">
-                    <h4>⚠️ Violence Detected At:</h4>
-                    <div id="violenceList" class="detection-container"></div>
-                </div>
-            </div>
-            
-            <h3>Certificate</h3>
-            <div id="certificate" 
-     style="display: none; background: #f7f5dd; padding: 20px; border-radius: 10px; color: #000;">
-    <h4>🎉 Certificate of Analysis</h4>
-    <p id="moviename" >Movie Name: <span id="movieName">N/A</span></p>
-    <p id="movierate" >Rating: <span id="movieRating">N/A</span></p>
-</div>
-    </div>
-    <script src="script.js"></script>
-    
-
-        
+    <script>
+        function startCensoring() {
+            window.location.href = 'analysis.html';
+        }
+    </script>
 </body>
 </html>
