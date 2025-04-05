@@ -26,15 +26,12 @@ function uploadVideo() {
 
         console.log("📤 Video uploaded successfully!");
 
-        // ❌ Remove generateCertificate() from here
-        // generateCertificate();  ❌ This was causing the issue!
-
-        // ✅ Only fetch detections after a delay (wait for processing)
+        
         setTimeout(fetchDetections, 5000);
     })
     .catch(error => {
         console.error("Upload failed:", error);
-        status.innerText = "Upload failed.";
+        status.innerText = "Upload failed.";sns
     });
 
     let video = document.createElement("video");
@@ -168,11 +165,10 @@ function generateCertificate() {
     let videoInput = document.getElementById("videoInput");
 
     if (videoInput.files.length > 0) {
-        let movieName = videoInput.files[0].name.replace(/\.[^/.]+$/, ""); 
-
+        let movieName = videoInput.files[0].name.replace(/\.[^/.]+$/, "");
         document.getElementById("movieName").innerText = movieName;
 
-        let totalSeconds = parseInt(document.getElementById("videoDuration").dataset.seconds) || 1; 
+        let totalSeconds = parseInt(document.getElementById("videoDuration").dataset.seconds) || 1;
 
         let violenceSeconds = extractSeconds(document.getElementById("violenceCount").innerText);
         let nuditySeconds = extractSeconds(document.getElementById("nudityCount").innerText);
@@ -180,12 +176,7 @@ function generateCertificate() {
         let violencePercentage = (violenceSeconds / totalSeconds) * 100;
         let nudityPercentage = (nuditySeconds / totalSeconds) * 100;
 
-        console.log(`🎥 Total Duration: ${totalSeconds} sec`);
-        console.log(`⚠️ Violence: ${violenceSeconds} sec (${violencePercentage.toFixed(2)}%)`);
-        console.log(`🔞 Nudity: ${nuditySeconds} sec (${nudityPercentage.toFixed(2)}%)`);
-
         let rating = "U";
-
         if (violencePercentage > 50 || nudityPercentage > 25) {
             rating = "A";
         } else if ((violencePercentage >= 25 && violencePercentage <= 50) || 
@@ -193,9 +184,9 @@ function generateCertificate() {
             rating = "U/A";
         }
 
-        console.log("✅ Assigned Rating:", rating);
         ratingElement.innerText = rating;
         certificateDiv.style.display = "block";
+        document.getElementById("downloadCertificate").style.display = "inline-block";
     } else {
         console.log("❌ No video file found!");
     }
@@ -210,3 +201,14 @@ document.getElementById("uploadedVideo").onended = function () {
     console.log("Video playback ended. Calling generateCertificate...");
     generateCertificate();
 };
+
+document.getElementById("downloadCertificate").addEventListener("click", () => {
+    const certificate = document.getElementById("certificate");
+
+    html2canvas(certificate).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "certificate.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
+});
